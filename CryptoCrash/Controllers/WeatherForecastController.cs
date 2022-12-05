@@ -29,5 +29,12 @@ public class WeatherForecastController : ControllerBase
         })
         .ToArray();
     }
+    [HttpPost]
+    public ActionResult Post(WeatherForecast forecast)
+    {
+        // Save the weather...
+
+        return Ok();
+    }
 }
 
