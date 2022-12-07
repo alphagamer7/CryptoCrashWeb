@@ -11,13 +11,12 @@
     <None Remove="Aguacongas.Firebase" />
     <None Remove="Aguacongas.Identity.Firebase" />
     <None Remove="Aguacongas.Identity.Firestore" />
+    <None Remove="Microsoft.AspNetCore.Identity" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Services\" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Aguacongas.Firebase" Version="3.3.1" />
-    <PackageReference Include="Aguacongas.Identity.Firebase" Version="3.3.1" />
-    <PackageReference Include="Aguacongas.Identity.Firestore" Version="3.3.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.2.0" />
   </ItemGroup>
 </Project>
