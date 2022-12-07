@@ -24,6 +24,12 @@ namespace CryptoCrash.Controllers
         {
             return "value";
         }
+        // GET api/values/5
+        [HttpGet("{id}")]
+        public string Set(int id)
+        {
+            return "value";
+        }
 
         // POST api/values
         [HttpPost]
