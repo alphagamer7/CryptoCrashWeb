@@ -8,8 +8,16 @@
 
   <ItemGroup>
     <None Remove="Services\" />
+    <None Remove="Aguacongas.Firebase" />
+    <None Remove="Aguacongas.Identity.Firebase" />
+    <None Remove="Aguacongas.Identity.Firestore" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Aguacongas.Firebase" Version="3.3.1" />
+    <PackageReference Include="Aguacongas.Identity.Firebase" Version="3.3.1" />
+    <PackageReference Include="Aguacongas.Identity.Firestore" Version="3.3.1" />
   </ItemGroup>
 </Project>
