@@ -1,8 +1,9 @@
+
 ﻿using System;
 namespace CryptoCrashLogic
 {
-	public class News
-	{
+    public class News
+    {
         public string Title { get; set; }
         public double Author { get; set; }
         public string Description { get; set; }
@@ -12,8 +13,8 @@ namespace CryptoCrashLogic
         public string Content { get; set; }
 
         public News()
-		{
-		}
-	}
+        {
+        }
+    }
 }
 
