@@ -10,4 +10,6 @@ Shivam Sharma: A00253431
 We initiall tried to use with firebase identity, but since it took too long we decided to go with the ASP.NET with idenity approach. 
 We wil use firebase storeage to upload profile picture since we did that in our android project and we could reuse the same logic.
 
+We also thought about going with Angular, but decided against it since razorpages were quite straightforward and takes less time.
+
 
