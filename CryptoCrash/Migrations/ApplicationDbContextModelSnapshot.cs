@@ -97,6 +97,29 @@ namespace CryptoCrash.Migrations
                     b.ToTable("AspNetUsers", (string)null);
                 });
 
+            modelBuilder.Entity("CryptoCrash.Models.CryptCurrency", b =>
+                {
+                    b.Property<string>("Asset_id_quote")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("ApplicationUserId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<double>("Asset_id_base")
+                        .HasColumnType("float");
+
+                    b.Property<int>("Src_side_quoteId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Asset_id_quote");
+
+                    b.HasIndex("ApplicationUserId");
+
+                    b.HasIndex("Src_side_quoteId");
+
+                    b.ToTable("CryptCurrency");
+                });
+
             modelBuilder.Entity("CryptoCrash.Models.News", b =>
                 {
                     b.Property<string>("Id")
@@ -138,6 +161,29 @@ namespace CryptoCrash.Migrations
                     b.HasIndex("UserId");
 
                     b.ToTable("News");
+                });
+
+            modelBuilder.Entity("CryptoCrash.Models.SrcData", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("Asset")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<double>("Rate")
+                        .HasColumnType("float");
+
+                    b.Property<double>("Volume")
+                        .HasColumnType("float");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("SrcData");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
@@ -277,10 +323,25 @@ namespace CryptoCrash.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
+            modelBuilder.Entity("CryptoCrash.Models.CryptCurrency", b =>
+                {
+                    b.HasOne("CryptoCrash.Areas.Identity.Data.ApplicationUser", null)
+                        .WithMany("FavCryptoList")
+                        .HasForeignKey("ApplicationUserId");
+
+                    b.HasOne("CryptoCrash.Models.SrcData", "Src_side_quote")
+                        .WithMany()
+                        .HasForeignKey("Src_side_quoteId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Src_side_quote");
+                });
+
             modelBuilder.Entity("CryptoCrash.Models.News", b =>
                 {
                     b.HasOne("CryptoCrash.Areas.Identity.Data.ApplicationUser", "User")
-                        .WithMany()
+                        .WithMany("ReadLaterList")
                         .HasForeignKey("UserId");
 
                     b.Navigation("User");
@@ -335,6 +396,13 @@ namespace CryptoCrash.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("CryptoCrash.Areas.Identity.Data.ApplicationUser", b =>
+                {
+                    b.Navigation("FavCryptoList");
+
+                    b.Navigation("ReadLaterList");
                 });
 #pragma warning restore 612, 618
         }

@@ -50,6 +50,41 @@ namespace CryptoCrash.Controllers
         }
 
 
+        private List<News> GetUserReadLaterList(ApplicationUser user)
+        {
+            return (from n in _context.News.Include(news => news.User)
+                    where string.Equals(user.UserName, n.User!.UserName)
+                    select n).ToList();
+        }
+
+
+        public IActionResult AddToWatchList(string articleId)
+        {
+            TempData["Error"] = hasError;
+            if (!User.Identity!.IsAuthenticated)
+            {
+                return Redirect("~/Identity/Account/Login");
+            }
+            var user = GetUser();
+            if (user != default(ApplicationUser))
+            {
+                //var readLaterList = GetUserReadLaterList(user);
+                //var newsItem = (from m in News
+                //             where m.Id == articleId && readLaterList.Count(_news => string.Equals(_news.id, articleId)) == 0
+                //             select m).FirstOrDefault();
+                //if (newsItem != default(News))
+                //{
+                //    if ((from n in _context.News where string.Equals(n.Id, articleId) select n).Count() == 0)
+                //    {
+                //        user!.readLaterList!.Add(newsItem);
+                //        _context.SaveChanges();
+                //    }
+                //}
+            }
+            return RedirectToAction("MoviesList");
+        }
+
+
         public IActionResult NewsList()
         {
             if (!User.Identity!.IsAuthenticated)
