@@ -16,6 +16,8 @@ namespace CryptoCrash.Controllers
 
         private readonly ApplicationDbContext _context;
 
+        private List<News> readLaterList = new List<News>();
+
         private bool hasError = false;
 
         public ReadLaterListController(ApplicationDbContext context)
@@ -52,10 +54,34 @@ namespace CryptoCrash.Controllers
             if (user != default(ApplicationUser))
             {
                 var readLater = GetUserReadLaterList(user);
+                readLaterList = readLater;
                 return View(readLater);
             }
             Console.WriteLine("not authenticated");
             return View();
+        }
+
+        public IActionResult RemoveReadLater(string publishedAt)
+        {
+            TempData["Error"] = hasError;
+            if (!User.Identity!.IsAuthenticated)
+            {
+                return Redirect("~/Identity/Account/Login");
+            }
+            var user = GetUser();
+            News news;
+            if (user != default(ApplicationUser))
+            {
+                var readLater = GetUserReadLaterList(user);
+                news = readLater!.FirstOrDefault(news => news.PublishedAt!.Equals(publishedAt));
+                if (news != default(News))
+                {
+                    _context.News.Remove(news);
+                    user!.ReadLaterList!.Remove(news);
+                    _context.SaveChanges();
+                }
+            }
+            return RedirectToAction("");
         }
     }
 }
