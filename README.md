@@ -31,11 +31,14 @@ Get news list
 
 
 <img width="957" alt="profile page" src="https://user-images.githubusercontent.com/17358908/206830346-8ec2c193-42c2-4597-b032-f587ecd9ced6.PNG">
+<img width="959" alt="Add to read later" src="https://user-images.githubusercontent.com/17358908/206875340-35eaf070-0850-4ba8-a3f1-7d31fb0f8abe.PNG">
+<img width="652" alt="remove from read later" src="https://user-images.githubusercontent.com/17358908/206875342-a40b85c8-5ded-42df-a1f3-0c2d4fa03e1e.PNG">
 
 
 DB mssql server
 <img width="954" alt="db view" src="https://user-images.githubusercontent.com/17358908/206830348-f16ca9a6-b653-4e68-95dd-40622957f26a.PNG">
 
+<img width="954" alt="db ss" src="https://user-images.githubusercontent.com/17358908/206875344-76f40f09-f219-435a-bc75-a9b9e6c3ea70.PNG">
 
 # Challenges faced and resolved
 
