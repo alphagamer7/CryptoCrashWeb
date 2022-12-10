@@ -1,7 +1,7 @@
 ﻿@{
-    ViewData["Title"] = "News Page";
+    ViewData["Title"] = "Read Later Page";
 }
-
+@model List<News>
 @if ((bool)TempData["Error"]!)
 {
     <h1 class="text-danger">Please check your internet connection!</h1>
@@ -20,7 +20,7 @@ else
                                 <h6 class="card-title">@news.Title</h6>
                                 <h7>@news.Author</h7>
                                 <p class="card-text">@news.PublishedAt</p>
-                                <button name="addReadLaterBtn" type="submit" asp-action="RemoveReadLater" class="btn btn-primary">Add to read later</button>
+                                <button name="removeReader" value="@news.PublishedAt" type="submit" asp-action="RemoveReadLater" class="btn btn-primary">Remove from read later</button>
                             </div>
                         </div>
                     </form>

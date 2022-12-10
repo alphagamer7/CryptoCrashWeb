@@ -40,7 +40,7 @@ namespace CryptoCrash.Controllers
 
 
         //Added linq
-           private ApplicationUser ? GetUser()
+        private ApplicationUser ? GetUser()
         {
             var username = User.Identity!.Name;
             return (from u in _context.Users
@@ -55,6 +55,22 @@ namespace CryptoCrash.Controllers
             return (from n in _context.News.Include(news => news.User)
                     where string.Equals(user.UserName, n.User!.UserName)
                     select n).ToList();
+        }
+
+        public IActionResult UserReadLaterList()
+        {
+            if (!User.Identity!.IsAuthenticated)
+            {
+                return Redirect("~/Identity/Account/Login");
+            }
+            var user = GetUser();
+            if (user != default(ApplicationUser))
+            {
+                var readLater = GetUserReadLaterList(user);
+                return View(readLater);
+            }
+            Console.WriteLine("not authenticated");
+            return View();
         }
 
 
