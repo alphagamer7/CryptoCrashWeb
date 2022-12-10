@@ -38,6 +38,19 @@ namespace CryptoCrash.Controllers
         }
 
 
+
+        //Added linq 
+           private AppUser? GetUser()
+        {
+            var username = User.Identity!.Name;
+            return (from u in _context.Users
+                    where string.Equals(username, u.UserName)
+                    select u)
+                .Include(_user => _user.WatchList!)
+                .FirstOrDefault();
+        }
+
+
         public IActionResult NewsList()
         {
             if (!User.Identity!.IsAuthenticated)
@@ -61,8 +74,6 @@ namespace CryptoCrash.Controllers
                 return View();
             return View(News);
         }
-
-
       
 
         // GET: News/Details/5
