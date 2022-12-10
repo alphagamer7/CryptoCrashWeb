@@ -38,6 +38,6 @@ DB mssql server
 
 - DB connection, resolved it.
 - Linking up razor pages, fixed that.
-- API call with server, resolved that, issue was too much api calls cause timeouts from server.
+- API call with server, resolved that, issue was too much api calls cause timeouts from server fixed that.
 
  
