@@ -6,11 +6,6 @@ namespace CryptoCrashLogic
         public string Asset_id_quote { get; set; }
         public double Asset_id_base { get; set; }
         public SrcData Src_side_quote { get; set; }
-
-        public CryptCurrency()
-        {
-
-        }
     }
 
     public class SrcData
