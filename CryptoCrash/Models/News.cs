@@ -10,9 +10,9 @@ namespace CryptoCrash.Models
         public string Author { get; set; }
         public string Description { get; set; }
         public string urlToImage { get; set; }
-        public string url { get; set; }
+
         public string PublishedAt { get; set; }
-        public string Content { get; set; }
+
 
         [Key]
         public ApplicationUser? User { get; set; }

@@ -58,7 +58,7 @@ namespace CryptoCrash.Controllers
         }
 
 
-        public IActionResult AddToWatchList(string articleId)
+        public IActionResult AddToReadLater(string publishedAt)
         {
             TempData["Error"] = hasError;
             if (!User.Identity!.IsAuthenticated)
@@ -68,20 +68,30 @@ namespace CryptoCrash.Controllers
             var user = GetUser();
             if (user != default(ApplicationUser))
             {
-                //var readLaterList = GetUserReadLaterList(user);
-                //var newsItem = (from m in News
-                //             where m.Id == articleId && readLaterList.Count(_news => string.Equals(_news.id, articleId)) == 0
-                //             select m).FirstOrDefault();
-                //if (newsItem != default(News))
-                //{
-                //    if ((from n in _context.News where string.Equals(n.Id, articleId) select n).Count() == 0)
-                //    {
-                //        user!.readLaterList!.Add(newsItem);
-                //        _context.SaveChanges();
-                //    }
-                //}
+                var readLaterList = GetUserReadLaterList(user);
+                var newsItem = (from m in News
+                                where m.PublishedAt == publishedAt && readLaterList.Count(_news => string.Equals(_news.PublishedAt, publishedAt)) == 0
+                                select m).FirstOrDefault();
+
+
+                if (newsItem != default(News))
+                {
+                    if ((from n in _context.News where string.Equals(n.PublishedAt, publishedAt) select n).Count() == 0)
+                    {
+                        if (user!.ReadLaterList == null)
+                        {
+                            user.ReadLaterList = new List<News>();
+                        }
+                        // uniqueTimestamp
+                        newsItem.Id = publishedAt;
+                        newsItem.User = user;
+
+                        user!.ReadLaterList!.Add(newsItem);
+                        _context.SaveChanges();
+                    }
+                }
             }
-            return RedirectToAction("MoviesList");
+            return RedirectToAction("");
         }
 
 

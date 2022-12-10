@@ -16,7 +16,6 @@ namespace CryptoCrashLogic.Services
             client = new();
         }
 
-        private WebClientService clientService = new WebClientService();
         public static string newsUrl =
             "https://newsapi.org/v2/everything?q=cryptocurrency&apiKey=D08d6b3c579542f0abbae1f6a3c3949a&page=1";
 

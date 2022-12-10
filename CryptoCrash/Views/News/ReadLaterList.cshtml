@@ -1,0 +1,32 @@
+﻿@{
+    ViewData["Title"] = "News Page";
+}
+
+@if ((bool)TempData["Error"]!)
+{
+    <h1 class="text-danger">Please check your internet connection!</h1>
+}
+else
+{
+    <div class="container">
+        <div class="row">
+            @foreach (News news in Model)
+            {
+                <div class="col-md-4 col-lg-3 col-sm-6 p-2">
+                    <form asp-controller="Movie">
+                        <div class="card p-2" style="width: 18rem;">
+                            <img src="@news.urlToImage" class="card-img-top" style="height: 400px;">
+                            <div class="card-body">
+                                <h6 class="card-title">@news.Title</h6>
+                                <h7>@news.Author</h7>
+                                <p class="card-text">@news.PublishedAt</p>
+                                <button name="addReadLaterBtn" type="submit" asp-action="RemoveReadLater" class="btn btn-primary">Add to read later</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            }
+        </div>
+    </div>
+}
+
