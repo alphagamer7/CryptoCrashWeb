@@ -21,7 +21,10 @@ We also thought about going with Angular, but decided against it since razorpage
 - Testings was started, we did a few basic test as shown in commits.
 - We did basic linq query to get user details. We dint have to use too much of linq query since we did the first auxiliary goal which was to retrieve data from news orgs api.
 - Login, register and user management was done via scaffolding, but we customized to have first name and last name stored as well.
+- Extra added integration tests: https://github.com/preetyabhishek/CryptoCrashIntegrationTest/tree/feature/athif-testcases
 
+
+# Screenshots
 Get news list
 <img width="960" alt="image (1)" src="https://user-images.githubusercontent.com/17358908/206830347-41a413fd-5ef3-4864-9ca9-07ca6ff4e679.PNG">
 
