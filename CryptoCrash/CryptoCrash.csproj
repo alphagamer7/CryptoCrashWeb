@@ -25,6 +25,9 @@
   <ItemGroup>
     <Folder Include="Views\CryptoList\" />
     <Folder Include="Views\FavouriteList\" />
-    <Folder Include="Views\News\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CryptoCrashLogic\CryptoCrashLogic.csproj" />
+    <ProjectReference Include="..\CryptoCrashTest\CryptoCrashTest.csproj" />
   </ItemGroup>
 </Project>
