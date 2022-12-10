@@ -17,4 +17,7 @@
 </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\CryptoCrashLogic\CryptoCrashLogic.csproj" />
+  </ItemGroup>
 </Project>
