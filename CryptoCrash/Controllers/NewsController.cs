@@ -46,7 +46,6 @@ namespace CryptoCrash.Controllers
             return (from u in _context.Users
                     where string.Equals(username, u.UserName)
                     select u)
-                .Include(_user => _user.WatchList!)
                 .FirstOrDefault();
         }
 
