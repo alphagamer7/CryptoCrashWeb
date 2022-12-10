@@ -16,7 +16,7 @@ We wil use firebase storeage to upload profile picture since we did that in our 
 
 We also thought about going with Angular, but decided against it since razorpages were quite straightforward and takes less time since there is easy support for easy scaffolding.
 
-# Criteria points:
+# Criteria points - Checkin 2:
 - Added migrations, we mistakely added wrong datatype for author and did a migration to update field. We migrated via nuget package manager console.
 - Testings was started, we did a few basic test as shown in commits.
 - We did basic linq query to get user details. We dint have to use too much of linq query since we did the first auxiliary goal which was to retrieve data from news orgs api.
