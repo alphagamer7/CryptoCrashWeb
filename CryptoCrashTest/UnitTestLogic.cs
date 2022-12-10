@@ -1,4 +1,5 @@
 ﻿using System;
+using CryptoCrashLogic;
 using CryptoCrashLogic.Services;
 
 namespace CryptoCrashTest
@@ -6,7 +7,7 @@ namespace CryptoCrashTest
     [TestClass]
     public class UnitTestLogic
     {
-        NewsApiClient newApiClient;
+        NewsApiClient<News> newApiClient;
 
         public UnitTestLogic()
         {
@@ -15,7 +16,7 @@ namespace CryptoCrashTest
         [TestInitialize]
         public void Instantiate()
         {
-            newApiClient = new NewsApiClient();
+            newApiClient = new NewsApiClient<News>();
         }
 
         [TestMethod]
