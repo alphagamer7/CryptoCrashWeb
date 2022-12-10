@@ -4,7 +4,7 @@ Athif Ahamed Mohamed Shaffy: A00256229
 
 Shivam Sharma: A00253431
 
-#Updated Proposal
+# Updated Proposal
 
 [Final Proposal for Web.pdf](https://github.com/alphagamer7/CryptoCrashWeb/files/10199352/Final.Proposal.for.Web.pdf)
 
