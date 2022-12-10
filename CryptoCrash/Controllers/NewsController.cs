@@ -39,8 +39,8 @@ namespace CryptoCrash.Controllers
 
 
 
-        //Added linq 
-           private AppUser? GetUser()
+        //Added linq
+           private ApplicationUser ? GetUser()
         {
             var username = User.Identity!.Name;
             return (from u in _context.Users
