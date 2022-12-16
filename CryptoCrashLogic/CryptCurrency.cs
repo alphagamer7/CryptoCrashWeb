@@ -3,9 +3,15 @@ namespace CryptoCrashLogic
 {
     public class CryptCurrency
     {
-        public string Asset_id_quote { get; set; }
-        public double Asset_id_base { get; set; }
-        public SrcData Src_side_quote { get; set; }
+        public string asset_id { get; set; }
+
+        public int type_is_crypto { get; set; }
+
+        public string id_icon { get; set; }
+        public string name { get; set; }
+
+        public double price_usd { get; set; }
+
     }
 
     public class SrcData
