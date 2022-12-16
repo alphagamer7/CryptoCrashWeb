@@ -17,6 +17,7 @@ builder.Services.AddDefaultIdentity<ApplicationUser>(options => options.SignIn.R
 builder.Services.AddControllersWithViews();
 
 builder.Services.AddScoped<NewsApiClient<News>>();
+builder.Services.AddScoped<CryptoApiClient<CryptCurrency>>();
 
 var app = builder.Build();
 
