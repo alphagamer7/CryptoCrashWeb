@@ -32,7 +32,6 @@ namespace CryptoCrashLogic.Services
 
         public List<T> CreateNewsFromJson(string json)
         {
-       
             var res = JsonConvert.DeserializeObject<Response<T>>(json);
             return res?.articles!;
         }
