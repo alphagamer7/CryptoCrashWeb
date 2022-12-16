@@ -23,6 +23,7 @@ We also thought about going with Angular, but decided against it since razorpage
 - Login, register and user management was done via scaffolding, but we customized to have first name and last name stored as well.
 - Extra added integration tests: https://github.com/preetyabhishek/CryptoCrashIntegrationTest/tree/feature/athif-testcases
 
+# Criteria points - Checkin 3:
 
 # Screenshots
 Get news list
