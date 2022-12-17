@@ -34,6 +34,11 @@ We also thought about going with Angular, but decided against it since razorpage
 - Added data migrations after we updated field details.
 - Extra - Added git branch withpull request and merged  
 
+# MVC controller test issues
+- We followed this course and tried to add the test contollers but some of the test controllers dont work as expected.
+https://learn.microsoft.com/en-us/aspnet/core/mvc/controllers/testing?view=aspnetcore-7.0
+The mock setup always throws an exception. Tried to find solutions on stackoverflow but none of them worked :/.
+
 
 # Screenshots
 Get news list
