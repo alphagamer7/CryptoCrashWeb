@@ -28,7 +28,10 @@ We also thought about going with Angular, but decided against it since razorpage
 
 
 # Criteria points - Checkin 3:
-- 
+- Added unit test for most of the code details
+- Added ModelState.IsValid for server validation
+- Data attributes added for classes
+- Added data migrations after we updated field details.
 
 
 # Screenshots
