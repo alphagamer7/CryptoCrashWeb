@@ -15,7 +15,7 @@ Idea is basically a web version of our iOS app we build for the iOS course. iOS 
 We initiall tried to use with firebase identity, but since it took too long we decided to go with the ASP.NET with idenity approach. 
 We wil use firebase storeage to upload profile picture since we did that in our android project and we could reuse the same logic.
 
-We also thought about going with Angular, but decided against it since razorpages were quite straightforward and takes less time since there is easy support for easy scaffolding.
+We also thought about going with Angular, but decided against it since razorpages were quite straightforward and takes less time since there is easy support for easy scaffolding with entity framework.
 
 # Criteria points - Checkin 2:
 - Added migrations, we mistakely added wrong datatype for author and did a migration to update field. We migrated via nuget package manager console.
@@ -37,7 +37,7 @@ We also thought about going with Angular, but decided against it since razorpage
 # MVC controller test issues
 - We followed this course and tried to add the test contollers but some of the test controllers dont work as expected.
 https://learn.microsoft.com/en-us/aspnet/core/mvc/controllers/testing?view=aspnetcore-7.0
-The mock setup always throws an exception. Tried to find solutions on stackoverflow but none of them worked :/.
+The mock setup always throws an exception. Tried to find solutions on stackoverflow but none of them worked :/, we tried out best.
 
 
 # Screenshots
