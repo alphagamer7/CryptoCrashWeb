@@ -7,7 +7,8 @@ Shivam Sharma: A00253431
 # Updated Proposal
 
 [Final Proposal for Web.pdf](https://github.com/alphagamer7/CryptoCrashWeb/files/10199352/Final.Proposal.for.Web.pdf)
-Hope it could be remarked :) 
+Web version of our iOS Crypto Crash Mobile Application
+https://github.com/alphagamer7/cryptocrash
 
 # Updates
 
@@ -22,6 +23,8 @@ We also thought about going with Angular, but decided against it since razorpage
 - We did basic linq query to get user details. We dint have to use too much of linq query since we did the first auxiliary goal which was to retrieve data from news orgs api.
 - Login, register and user management was done via scaffolding, but we customized to have first name and last name stored as well.
 - Extra added integration tests: https://github.com/preetyabhishek/CryptoCrashIntegrationTest/tree/feature/athif-testcases
+
+
 
 # Criteria points - Checkin 3:
 
