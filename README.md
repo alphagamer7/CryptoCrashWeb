@@ -28,11 +28,11 @@ We also thought about going with Angular, but decided against it since razorpage
 
 
 # Criteria points - Checkin 3:
-- Added unit test for most of the code details
-- Added ModelState.IsValid for server validation
-- Data attributes added for classes
+- Added unit test for most of the code details (some details not working as expected asa documented in below section)
+- Added ModelState.IsValid for server validation, added basic checks before CRUD operations.
+- Data attributes added for classes, like `[Required]`
 - Added data migrations after we updated field details.
-- Extra - Added git branch withpull request and merged  
+- Extra details we did - Added git branch withpull request and merged pull requests. Ref: https://github.com/alphagamer7/CryptoCrashWeb/pulls   
 
 # MVC controller test issues
 - We followed this course and tried to add the test contollers but some of the test controllers dont work as expected.
@@ -66,4 +66,10 @@ DB mssql server
 - Linking up razor pages, fixed that.
 - API call with server, resolved that, issue was too much api calls cause timeouts from server fixed that.
 - We stumbled across few issues while we were testing and then followed few youtube tutorial and as well as your classes and added tests.
+
+# Future steps:
+- Make interface better looking with material UI.
+- Host db on azure cloud sql server
+- Host app on appservice of azure
+- SEO/marketing
  
