@@ -32,6 +32,7 @@ We also thought about going with Angular, but decided against it since razorpage
 - Added ModelState.IsValid for server validation
 - Data attributes added for classes
 - Added data migrations after we updated field details.
+- Extra - Added git branch withpull request and merged  
 
 
 # Screenshots
