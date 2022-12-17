@@ -32,11 +32,15 @@ We also thought about going with Angular, but decided against it since razorpage
 - Added ModelState.IsValid for server validation
 - Data attributes added for classes
 - Added data migrations after we updated field details.
+- Extra - Added git branch withpull request and merged  
 
 
 # Screenshots
 Get news list
 <img width="960" alt="image (1)" src="https://user-images.githubusercontent.com/17358908/206830347-41a413fd-5ef3-4864-9ca9-07ca6ff4e679.PNG">
+
+Home page
+<img width="960" alt="homepage latest" src="https://user-images.githubusercontent.com/17358908/208249107-c6632825-feb8-4586-818c-8ed607518aa1.PNG">
 
 
 
@@ -49,6 +53,7 @@ DB mssql server
 <img width="954" alt="db view" src="https://user-images.githubusercontent.com/17358908/206830348-f16ca9a6-b653-4e68-95dd-40622957f26a.PNG">
 
 <img width="954" alt="db ss" src="https://user-images.githubusercontent.com/17358908/206875344-76f40f09-f219-435a-bc75-a9b9e6c3ea70.PNG">
+
 
 # Challenges faced and resolved
 
