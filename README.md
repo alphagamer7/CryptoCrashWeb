@@ -8,8 +8,7 @@ Shivam Sharma: A00253431
 
 [Final Proposal for Web.pdf](https://github.com/alphagamer7/CryptoCrashWeb/files/10199352/Final.Proposal.for.Web.pdf)
 
-Web version of our iOS Crypto Crash Mobile Application
-https://github.com/alphagamer7/cryptocrash
+Idea is basically a web version of our iOS app we build for the iOS course. iOS app link:  https://github.com/alphagamer7/cryptocrash
 
 # Updates
 
@@ -23,16 +22,22 @@ We also thought about going with Angular, but decided against it since razorpage
 - Testings was started, we did a few basic test as shown in commits.
 - We did basic linq query to get user details. We dint have to use too much of linq query since we did the first auxiliary goal which was to retrieve data from news orgs api.
 - Login, register and user management was done via scaffolding, but we customized to have first name and last name stored as well.
-- Extra added integration tests: https://github.com/preetyabhishek/CryptoCrashIntegrationTest/tree/feature/athif-testcases
+- Extra added integration tests: https://github.com/preetyabhishek/CryptoCrashIntegrationTest
 
 
 
 # Criteria points - Checkin 3:
-- Added unit test for most of the code details
-- Added ModelState.IsValid for server validation
-- Data attributes added for classes
-- Added data migrations after we updated field details.
-- Extra - Added git branch withpull request and merged  
+- Added unit test for most of the code details (some details not working as expected as documented in below section)
+- Integration tests: https://github.com/preetyabhishek/CryptoCrashIntegrationTest
+- Added ModelState.IsValid for server validation, added basic checks before CRUD operations.
+- Data attributes added for classes, like `[Required]` : https://github.com/alphagamer7/CryptoCrashWeb/blob/master/CryptoCrashLogic/Model/CryptCurrency.cs#L15
+- Added data migrations after we updated field details. https://github.com/alphagamer7/CryptoCrashWeb/blob/master/CryptoCrash/Migrations
+- Extra details we did - Added git branch withpull request and merged pull requests. Ref: https://github.com/alphagamer7/CryptoCrashWeb/pulls   
+
+# MVC controller test issues
+- We followed this course and tried to add the test contollers but some of the test controllers dont work as expected.
+https://learn.microsoft.com/en-us/aspnet/core/mvc/controllers/testing?view=aspnetcore-7.0
+The mock setup always throws an exception. Tried to find solutions on stackoverflow but none of them worked :/.
 
 
 # Screenshots
@@ -61,4 +66,10 @@ DB mssql server
 - Linking up razor pages, fixed that.
 - API call with server, resolved that, issue was too much api calls cause timeouts from server fixed that.
 - We stumbled across few issues while we were testing and then followed few youtube tutorial and as well as your classes and added tests.
+
+# Future steps:
+- Make interface better looking with material UI.
+- Host db on azure cloud sql server
+- Host app on appservice of azure
+- SEO/marketing
  
