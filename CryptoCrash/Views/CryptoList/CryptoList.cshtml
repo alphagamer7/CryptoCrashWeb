@@ -2,7 +2,31 @@
     ViewData["Title"] = "Crypto List";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+@if ((bool)TempData["Error"]!)
+{
+    <h1 class="text-danger">Please check your internet connection!</h1>
+}
+else
+{
+    <div class="container">
+        <div class="row">
+            @foreach (News news in Model)
+            {
+                <div class="col-md-5 col-lg-3 col-sm-6 p-2">
+                    <form asp-controller="Movie">
+                        <div class="card p-2" style="width: 18rem;">
+                            <img src="@news.urlToImage" class="card-img-top" style="height: 400px;">
+                            <div class="card-body">
+                                <h6 class="card-title">@news.Title</h6>
+                                <h7>@news.Author</h7>
+                                <p class="card-text">@news.PublishedAt</p>
+                                <button name="PublishedAt" value="@news.PublishedAt" type="submit" asp-action="AddToReadLater" class="btn btn-primary">Add to read later</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            }
+        </div>
+    </div>
+}
+

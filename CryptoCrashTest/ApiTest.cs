@@ -1,4 +1,6 @@
-﻿using CryptoCrashLogic.Services;
+﻿using CryptoCrash.Models;
+using CryptoCrashLogic.Services;
+using Microsoft.IdentityModel.Logging;
 
 namespace CryptoCrashTest;
 
@@ -9,6 +11,37 @@ public class UnitTest1
         {
             public string? testString { get; set; }
         }
+
+
+    [TestMethod]
+    public void NewsApiClassIsInstantiable()
+    {
+        NewsApiClient<MockedResponse> client = new();
+        Assert.IsNotNull(client);
+    }
+
+    [TestMethod]
+    public void CryptoApiClassIsInstantiable()
+    {
+        CryptoApiClient<MockedResponse> client = new();
+        Assert.IsNotNull(client);
+    }
+
+    [TestMethod]
+    public void NewsClassIsInstantiable()
+    {
+        News news  = new News();
+        Assert.IsNotNull(news);
+    }
+
+
+    [TestMethod]
+    public void CryptoClassIsInstantiable()
+    {
+        CryptoCurrency cryptoCurrency = new CryptoCurrency();
+        Assert.IsNotNull(cryptoCurrency);
+    }
+
 
     [TestMethod]
     public void TestNewsApiDeserilization()

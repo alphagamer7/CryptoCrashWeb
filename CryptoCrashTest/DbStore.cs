@@ -9,6 +9,7 @@ using Moq;
 using CryptoCrashLogic.Store;
 using System.Collections;
 using ApplicationUser = CryptoCrashLogic.Models.ApplicationUser;
+using CryptoCrash.Models;
 
 namespace CryptoCrashTest
 {
@@ -34,16 +35,7 @@ namespace CryptoCrashTest
             LastName = "Test"
         };
 
-        //public static News newsToDelete = new News
-        //{
-        //    Id = "3",
-        //    Title = "Crypto Fraud Scam",
-        //    Author = "bbc",
-        //    Description = "desc",
-        //    urlToImage = "https://movies.universalpictures.com/media/oppenheimer-poster-560x880-62defacb1b002-1.jpg",
-        //    PublishedAt ="2121.21.21",
-        //    User = user2
-        //};
+
 
         public static string username = "User1";
         public static News addNews { get; } = new News
@@ -91,15 +83,7 @@ namespace CryptoCrashTest
 
             mock.Setup(m => m.NewsExists("2121.21.21")).Returns(() => true);
             mock.Setup(m => m.NewsExists("2121.21.13")).Returns(() => false);
-
-
-
-
-
             mock.Setup(m => m.AddNews(addNews)).Callback<News>((_news) => news.Add(_news));
-
-
-
 
 
             return mock;
@@ -135,7 +119,7 @@ namespace CryptoCrashTest
             var storeWrapper = DbStoreWrapper.GetMock();
             var store = storeWrapper.Object;
             store.AddNews(DbStoreWrapper.newsToAdd);
-            //Assert.IsTrue(store.GetAll().Contains(DbStoreWrapper.newsToAdd));
+            Assert.IsTrue(store.GetAll().Contains(DbStoreWrapper.newsToAdd));
 
             Assert.AreEqual(2, store.GetAll().Count());
         }
