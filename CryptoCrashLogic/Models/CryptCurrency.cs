@@ -1,5 +1,6 @@
 ﻿using System;
-namespace CryptoCrashLogic
+
+namespace CryptoCrashLogic.Models
 {
     public class CryptCurrency
     {

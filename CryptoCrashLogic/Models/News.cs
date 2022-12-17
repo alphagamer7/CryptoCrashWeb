@@ -1,6 +1,7 @@
 
-﻿using System;
-namespace CryptoCrashLogic
+using System;
+
+namespace CryptoCrashLogic.Models
 {
     public class News
     {
@@ -10,6 +11,8 @@ namespace CryptoCrashLogic
         public string urlToImage { get; set; }
         public string PublishedAt { get; set; }
         public string Content { get; set; }
+
+        public ApplicationUser User { get; set; }
 
     }
 }
