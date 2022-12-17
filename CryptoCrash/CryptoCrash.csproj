@@ -28,6 +28,5 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CryptoCrashLogic\CryptoCrashLogic.csproj" />
-    <ProjectReference Include="..\CryptoCrashTest\CryptoCrashTest.csproj" />
   </ItemGroup>
 </Project>
