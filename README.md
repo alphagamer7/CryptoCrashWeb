@@ -30,8 +30,8 @@ We also thought about going with Angular, but decided against it since razorpage
 - Added unit test for most of the code details (some details not working as expected as documented in below section)
 - Integration tests: https://github.com/preetyabhishek/CryptoCrashIntegrationTest
 - Added ModelState.IsValid for server validation, added basic checks before CRUD operations.
-- Data attributes added for classes, like `[Required]`
-- Added data migrations after we updated field details.
+- Data attributes added for classes, like `[Required]` : https://github.com/alphagamer7/CryptoCrashWeb/blob/master/CryptoCrashLogic/Model/CryptCurrency.cs#L15
+- Added data migrations after we updated field details. https://github.com/alphagamer7/CryptoCrashWeb/blob/master/CryptoCrash/Migrations
 - Extra details we did - Added git branch withpull request and merged pull requests. Ref: https://github.com/alphagamer7/CryptoCrashWeb/pulls   
 
 # MVC controller test issues
