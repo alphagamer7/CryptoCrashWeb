@@ -27,6 +27,8 @@ We also thought about going with Angular, but decided against it since razorpage
 
 
 # Criteria points - Checkin 3:
+- 
+
 
 # Screenshots
 Get news list
