@@ -74,7 +74,7 @@ namespace CryptoCrash.Controllers
             {
                 var readLater = GetUserReadLaterList(user);
                 news = readLater!.FirstOrDefault(news => news.PublishedAt!.Equals(publishedAt));
-                if (news != default(News))
+                if (news != default(News) && ModelState.IsValid)
                 {
                     _context.News.Remove(news);
                     user!.ReadLaterList!.Remove(news);

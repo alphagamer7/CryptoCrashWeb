@@ -1,6 +1,7 @@
 
-﻿using System;
-namespace CryptoCrashLogic
+using System;
+
+namespace CryptoCrashLogic.Model
 {
     public class News
     {

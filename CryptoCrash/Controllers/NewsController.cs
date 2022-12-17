@@ -76,6 +76,7 @@ namespace CryptoCrash.Controllers
 
         public IActionResult AddToReadLater(string publishedAt)
         {
+
             TempData["Error"] = hasError;
             if (!User.Identity!.IsAuthenticated)
             {
@@ -101,9 +102,11 @@ namespace CryptoCrash.Controllers
                         // uniqueTimestamp
                         newsItem.Id = publishedAt;
                         newsItem.User = user;
-
-                        user!.ReadLaterList!.Add(newsItem);
-                        _context.SaveChanges();
+                        if (ModelState.IsValid)
+                        {
+                            user!.ReadLaterList!.Add(newsItem);
+                            _context.SaveChanges();
+                        }
                     }
                 }
             }
@@ -125,6 +128,7 @@ namespace CryptoCrash.Controllers
 
         public IActionResult Index()
         {
+         
             if (!User.Identity!.IsAuthenticated)
             {
                 return Redirect("~/Identity/Account/Login");

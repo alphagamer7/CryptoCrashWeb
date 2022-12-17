@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using CryptoCrash.Models;
 using CryptoCrashLogic;
 using Microsoft.AspNetCore.Identity;
-using CryptCurrency = CryptoCrash.Models.CryptCurrency;
+using CryptoCurrency = CryptoCrash.Models.CryptoCurrency;
 using News = CryptoCrash.Models.News;
 
 namespace CryptoCrash.Areas.Identity.Data;
@@ -19,7 +19,7 @@ public class ApplicationUser : IdentityUser
 
     public ICollection<News>? ReadLaterList { get; set; }
 
-    public ICollection<CryptCurrency>? FavCryptoList { get; set; }
+    public ICollection<CryptoCurrency>? FavCryptoList { get; set; }
 
 }
 

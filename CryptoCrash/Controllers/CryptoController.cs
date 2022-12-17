@@ -11,12 +11,12 @@ namespace CryptoCrash.Controllers
 
         private readonly ApplicationDbContext _context;
 
-        private List<CryptCurrency> cryptoList = new List<CryptCurrency>();
+        private List<CryptoCurrency> cryptoList = new List<CryptoCurrency>();
 
         private bool hasError = false;
-        private readonly CryptoApiClient<CryptCurrency> _cryptoApiClient;
+        private readonly CryptoApiClient<CryptoCurrency> _cryptoApiClient;
 
-        public CryptoController(ApplicationDbContext context, CryptoApiClient<CryptCurrency> cryptoApiClient)
+        public CryptoController(ApplicationDbContext context, CryptoApiClient<CryptoCurrency> cryptoApiClient)
         {
             _context = context;
             _cryptoApiClient = cryptoApiClient;

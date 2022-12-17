@@ -1,5 +1,5 @@
 ﻿using System;
-using CryptoCrashLogic;
+using CryptoCrashLogic.Model;
 using CryptoCrashLogic.Services;
 
 namespace CryptoCrashTest
