@@ -164,9 +164,7 @@ namespace CryptoCrash.Controllers
             return View();
         }
 
-        // POST: News/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+      
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,Title,Author,Description,urlToImage,url,PublishedAt,Content")] News news)
@@ -180,7 +178,7 @@ namespace CryptoCrash.Controllers
             return View(news);
         }
 
-        // GET: News/Edit/5
+  
         public async Task<IActionResult> Edit(string id)
         {
             if (id == null || _context.News == null)
@@ -196,9 +194,6 @@ namespace CryptoCrash.Controllers
             return View(news);
         }
 
-        // POST: News/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(string id, [Bind("Id,Title,Author,Description,urlToImage,url,PublishedAt,Content")] News news)
@@ -231,7 +226,7 @@ namespace CryptoCrash.Controllers
             return View(news);
         }
 
-        // GET: News/Delete/5
+ 
         public async Task<IActionResult> Delete(string id)
         {
             if (id == null || _context.News == null)
@@ -249,7 +244,6 @@ namespace CryptoCrash.Controllers
             return View(news);
         }
 
-        // POST: News/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(string id)
@@ -259,7 +253,7 @@ namespace CryptoCrash.Controllers
                 return Problem("Entity set 'ApplicationDbContext.News'  is null.");
             }
             var news = await _context.News.FindAsync(id);
-            if (news != null)
+            if (news != null && ModelState.IsValid)
             {
                 _context.News.Remove(news);
             }

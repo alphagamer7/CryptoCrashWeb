@@ -34,6 +34,12 @@ namespace CryptoCrash.Controllers
             }
         }
 
+        [HttpGet]
+        public IEnumerable<CryptoCurrency> Get()
+        {
+            return cryptoList;
+        }
+
         private ApplicationUser? GetUser()
         {
             var username = User.Identity!.Name;
@@ -67,5 +73,7 @@ namespace CryptoCrash.Controllers
                 return View();
             return View(cryptoList);
         }
+
+        //
     }
 }

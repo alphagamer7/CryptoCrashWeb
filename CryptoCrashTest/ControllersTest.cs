@@ -7,11 +7,12 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using CryptoCrash;
 using CryptoCrash.Controllers;
 using Microsoft.AspNetCore.Mvc;
+using CryptoCrash.Models;
 
 namespace CryptoCrashTest
 {
     [TestClass]
-    public class NewsControllerTest
+    public class ControllerTest
     {
         [TestMethod]
         public void TestNewsControllerView()
@@ -20,6 +21,28 @@ namespace CryptoCrashTest
             var result = controller.Details(2) as ViewResult;
             Assert.AreEqual("Details", result.ViewName);
 
+        }
+
+
+        [TestMethod]
+        public void NewsControllerClassIsInstantiable()
+        {
+            NewsController newsController = new NewsController();
+            Assert.IsNotNull(newsController);
+        }
+
+        [TestMethod]
+        public void HomeControllerClassIsInstantiable()
+        {
+            HomeController homeController = new HomeController();
+            Assert.IsNotNull(homeController);
+        }
+
+        [TestMethod]
+        public void ReadControllerClassIsInstantiable()
+        {
+            ReadLaterListController readLater = new ReadLaterListController();
+            Assert.IsNotNull(readLater);
         }
 
 
