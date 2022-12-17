@@ -8,8 +8,7 @@ Shivam Sharma: A00253431
 
 [Final Proposal for Web.pdf](https://github.com/alphagamer7/CryptoCrashWeb/files/10199352/Final.Proposal.for.Web.pdf)
 
-Web version of our iOS Crypto Crash Mobile Application
-https://github.com/alphagamer7/cryptocrash
+Idea is basically a web version of our iOS app we build for the iOS course. iOS app link:  https://github.com/alphagamer7/cryptocrash
 
 # Updates
 
