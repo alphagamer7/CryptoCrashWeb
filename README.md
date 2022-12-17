@@ -22,12 +22,13 @@ We also thought about going with Angular, but decided against it since razorpage
 - Testings was started, we did a few basic test as shown in commits.
 - We did basic linq query to get user details. We dint have to use too much of linq query since we did the first auxiliary goal which was to retrieve data from news orgs api.
 - Login, register and user management was done via scaffolding, but we customized to have first name and last name stored as well.
-- Extra added integration tests: https://github.com/preetyabhishek/CryptoCrashIntegrationTest/tree/feature/athif-testcases
+- Extra added integration tests: https://github.com/preetyabhishek/CryptoCrashIntegrationTest
 
 
 
 # Criteria points - Checkin 3:
 - Added unit test for most of the code details (some details not working as expected as documented in below section)
+- Integration tests: https://github.com/preetyabhishek/CryptoCrashIntegrationTest
 - Added ModelState.IsValid for server validation, added basic checks before CRUD operations.
 - Data attributes added for classes, like `[Required]`
 - Added data migrations after we updated field details.
